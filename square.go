@@ -9,6 +9,17 @@ type Square struct {
 	a     uint
 }
 
+func NewSquare(xx, yy int, a uint) Square {
+	return Square{
+		start: Point{
+			x: xx,
+			y: yy,
+		},
+		a: a,
+	}
+
+}
+
 func (a Square) End() Point {
 	end := Point{}
 	end.x = a.start.x + int(a.a)
